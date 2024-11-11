@@ -1,0 +1,17 @@
+<div class="feeds-popup">
+    <h2>Upload Your Feed</h2>
+    <p>User: {{ username }}</p>
+    <p><img [src]="profilePic" alt="Profile Picture" class="profile-pic" /></p>
+  
+    <input type="file" (change)="onFileSelected($event)" />
+    <div *ngIf="selectedFile">
+      <p>Selected file: {{ selectedFile.name }}</p>
+    </div>
+  
+    <div *ngIf="uploadProgress > 0">
+      <p>Upload Progress: {{ uploadProgress }}%</p>
+    </div>
+  
+    <button (click)="uploadFile()">Upload Feed</button>
+  </div>
+  

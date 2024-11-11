@@ -1,0 +1,41 @@
+/* File: src/app/tenx-app-header/tenx-app-header.component.css */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(26, 25, 25);
+  font-size: 20px;
+  position: fixed;
+  width: 95%;
+  top: 0;
+  z-index: 1000;
+  height: 60px; /* Adjust header height */
+}
+
+.header .logo {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-info img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+}
+.welcome-text {
+  font-size: 2 rem; /* Increase the size of the font */
+  color:rgb(26, 25, 25); /* You can change the color as well (optional) */
+}
+.logo-text {
+  font-size: 3 rem; /* Increase the size of the font */
+  color:rgb(26, 25, 25); /* You can change the color as well (optional) */
+}

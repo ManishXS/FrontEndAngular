@@ -1,0 +1,26 @@
+<div class="feeds-container">
+  <div *ngFor="let feed of feeds" class="feed-box">
+    <div class="feed-header">
+      <img [src]="feed.userProfilePic" alt="Profile Picture" class="profile-pic" />
+      <span>{{ feed.username }}</span>
+    </div>
+    <div class="feed-content">
+      <img [src]="feed.feedUrl" alt="Feed Content" class="feed-image" />
+    </div>
+    <div class="feed-actions">
+      <button><i class="fas fa-heart"></i>  Like</button>
+      <button><i class="fas fa-comment"></i>  Comment</button>
+      <button><i class="fas fa-envelope"></i>  Direct Message</button>
+      <button><i class="fas fa-flag"></i>  Report Feed</button>
+      <button (click)="downloadFile(feed.feedUrl)">
+        <i class="fas fa-download"></i> Download
+      </button>
+      
+      <button (click)="subscribeToUser(feed.userId)"><i class="fas fa-bell"></i>  Subscribe</button>
+    </div>
+  </div>
+
+  <div *ngIf="loading" class="loading-spinner">Loading...</div>
+</div>
+
+  
